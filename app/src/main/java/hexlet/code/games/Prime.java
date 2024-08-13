@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-public class Prime implements Game{
+public final class Prime implements Game {
    private String question;
 
     public String getQuestion() {

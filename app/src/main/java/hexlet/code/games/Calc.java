@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-public class Calc implements Game {
+public final class Calc implements Game {
     private final String[] operators = {"+", "-", "*"};
     private String operand1;
     private  String operand2;

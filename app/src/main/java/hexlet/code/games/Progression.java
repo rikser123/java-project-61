@@ -1,17 +1,17 @@
 package hexlet.code.games;
 
-public class Progression implements Game{
-    private final int PROGRESSION_LENGTH = 10;
-    private final int MAX_PROGRESSION_GAP = 10;
+public final class Progression implements Game {
+    private final int progressionLength = 10;
+    private final int maxProgressionGap = 10;
     private String answer;
 
     public String getQuestion() {
         var startNumber = Integer.parseInt(Lib.getRandomOperand());
-        String[] progression = new String[PROGRESSION_LENGTH];
+        String[] progression = new String[progressionLength];
         var missingIndex = Math.round(Math.random() * progression.length);
-        var progressionGap = Math.round(1 + Math.random() * (MAX_PROGRESSION_GAP - 1));
+        var progressionGap = Math.round(1 + Math.random() * (maxProgressionGap - 1));
 
-        for (var i = 0; i < progression.length; i +=1) {
+        for (var i = 0; i < progression.length; i += 1) {
             var number = startNumber + i * progressionGap;
             if (i == missingIndex) {
                 answer = String.valueOf(number);

@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-public class GCD implements Game {
+public final class GCD implements Game {
     private String operand1;
     private String operand2;
     private String question;
