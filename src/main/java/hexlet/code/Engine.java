@@ -5,6 +5,7 @@ import hexlet.code.games.Game;
 import hexlet.code.games.Greeter;
 import hexlet.code.games.Calc;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 import java.util.Scanner;
 
 
@@ -27,10 +28,9 @@ public class Engine {
         while (numberCounter < QUESTION_LIMIT) {
           var question = game.getQuestion();
           showQuestion(question);
-          System.out.println(question);
 
-            var userAnswer = scanner.next();
-            var correctAnswer = game.getCorrectAnswer();
+           var userAnswer = scanner.next();
+           var correctAnswer = game.getCorrectAnswer();
 
             System.out.println("Your answer: " + userAnswer);
 
@@ -75,6 +75,8 @@ public class Engine {
                 return new Calc();
             case "4":
                 return new GCD();
+            case "5":
+                return new Progression();
             default:
                 return new Greeter();
         }
