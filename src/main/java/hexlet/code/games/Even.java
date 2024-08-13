@@ -1,11 +1,10 @@
 package hexlet.code.games;
 
 public class Even implements Game {
-    private final int RANDOM_LIMIT = 100;
     private String question;
 
     public String getQuestion() {
-        this.question = String.valueOf(Math.round(Math.random() * RANDOM_LIMIT));
+        this.question = Lib.getRandomOperand();
         return this.question;
     }
 

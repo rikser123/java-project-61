@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 public class Calc implements Game {
-    private final int RANDOM_LIMIT = 100;
     private final String[] operators = {"+", "-", "*"};
     private String operand1;
     private  String operand2;
@@ -9,8 +8,8 @@ public class Calc implements Game {
     private String question;
 
     public String getQuestion() {
-        this.operand1 = String.valueOf(Math.round(Math.random() * RANDOM_LIMIT));
-        this.operand2 = String.valueOf(Math.round(Math.random() * RANDOM_LIMIT));
+        this.operand1 = Lib.getRandomOperand();
+        this.operand2 = Lib.getRandomOperand();
         int randomIndex = (int) Math.floor(Math.random() * this.operators.length);
         this.operator = this.operators[randomIndex];
 

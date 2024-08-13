@@ -4,8 +4,9 @@ import hexlet.code.games.Even;
 import hexlet.code.games.Game;
 import hexlet.code.games.Greeter;
 import hexlet.code.games.Calc;
-
+import hexlet.code.games.GCD;
 import java.util.Scanner;
+
 
 public class Engine {
     private static int numberCounter = 0;
@@ -72,6 +73,8 @@ public class Engine {
                 return new Even();
             case "3":
                 return new Calc();
+            case "4":
+                return new GCD();
             default:
                 return new Greeter();
         }
