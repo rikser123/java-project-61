@@ -6,6 +6,7 @@ import hexlet.code.games.Greeter;
 import hexlet.code.games.Calc;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 
@@ -77,6 +78,8 @@ public class Engine {
                 return new GCD();
             case "5":
                 return new Progression();
+            case "6":
+                return new Prime();
             default:
                 return new Greeter();
         }
