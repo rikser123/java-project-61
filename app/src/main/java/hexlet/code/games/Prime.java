@@ -10,7 +10,7 @@ public final class Prime implements Game {
 
     public String getCorrectAnswer() {
         var number = Integer.parseInt(this.question);
-        var isPrime = isPrime(number, 1);
+        var isPrime = isPrime(number, 2);
 
         return isPrime ? "yes" : "no";
     }
@@ -20,6 +20,10 @@ public final class Prime implements Game {
     }
 
     private boolean isPrime(int number, int divider) {
+        if (number <= 2) {
+            return true;
+        }
+
         if (divider == number) {
             return true;
         }
